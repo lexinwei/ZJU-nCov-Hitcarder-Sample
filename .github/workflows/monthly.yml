@@ -1,9 +1,13 @@
 name: 'Monthly Action'
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: '0 0 1 * *'
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  #workflow_dispatch:
+  #schedule:
+  #  - cron: '0 0 1 * *'
 
 jobs:
   main:
